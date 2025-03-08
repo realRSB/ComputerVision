@@ -58,7 +58,7 @@ class PoseDetector:
         
         Args:
             mode (bool): Static mode for processing individual frames
-            up_body (bool): Upper body only mode
+            up_body (bool): Upper body only mode (False for full body)
             smooth (bool): Enable temporal landmark smoothing
             detection_conf (float): Minimum detection confidence (0-1)
             track_conf (float): Minimum tracking confidence (0-1)
@@ -74,7 +74,9 @@ class PoseDetector:
         self.mp_pose = mp.solutions.pose
         self.pose = self.mp_pose.Pose(
             static_image_mode=self.mode,
+            model_complexity=1,  # 0=Lite, 1=Full, 2=Heavy
             smooth_landmarks=self.smooth,
+            enable_segmentation=False,  # Set to True if you want segmentation
             min_detection_confidence=self.detection_conf,
             min_tracking_confidence=self.track_conf
         )
@@ -180,6 +182,36 @@ class PoseDetector:
             # Display angle near the vertex point
             cv2.putText(img, f"{int(angle)} deg", (x2 - 50, y2 + 50),
                        cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 255), 2)
+        
+        return angle
+
+    def get_angle(self, img, p1, p2, p3):
+        """Calculate angle between three points.
+        
+        Args:
+            img: Input image
+            p1: First point index (start)
+            p2: Second point index (middle/vertex)
+            p3: Third point index (end)
+        
+        Returns:
+            float: Calculated angle in degrees
+        """
+        if not self.landmark_list:
+            return 0
+        
+        # Get coordinates
+        x1, y1 = self.landmark_list[p1][1:]
+        x2, y2 = self.landmark_list[p2][1:]
+        x3, y3 = self.landmark_list[p3][1:]
+        
+        # Calculate angle
+        angle = math.degrees(math.atan2(y3 - y2, x3 - x2) -
+                            math.atan2(y1 - y2, x1 - x2))
+        
+        # Make angle positive
+        if angle < 0:
+            angle += 360
         
         return angle
 

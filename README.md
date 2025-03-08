@@ -1,6 +1,10 @@
 # 📌 Computer Vision Project
 
-Welcome to the **ComputerVision** repository! This project focuses on leveraging **OpenCV** and **MediaPipe** for advanced computer vision applications, including hand tracking, face detection, and more. 🚀
+Welcome to the **ComputerVision** repository! This project focuses on leveraging **OpenCV** and **MediaPipe** for advanced computer vision applications, including hand tracking, pose estimation, and more. 🚀
+
+---
+## Before I start
+This was possible because of this course: https://www.youtube.com/watch?v=01sAkU_NvOY
 
 ---
 ## Before I start
@@ -11,8 +15,10 @@ This was possible because of this course: https://www.youtube.com/watch?v=01sAkU
 This repository contains various computer vision implementations utilizing:
 
 - **OpenCV**: Image processing and real-time computer vision.
-- **MediaPipe**: Pre-trained machine learning models for facial recognition, hand tracking, etc.
+- **MediaPipe**: Pre-trained machine learning models for facial recognition, hand tracking, pose estimation, etc.
 - **Python**: The core programming language for implementing models and processing image data.
+- **NumPy**: For mathematical operations.
+- **Matplotlib**: For visualization.
 
 ---
 
@@ -45,7 +51,9 @@ pip install -r requirements.txt
 
 ## 🚀 How to Use
 
-Run the main script to start the computer vision pipeline:
+### Hand Tracking
+
+Run the hand tracking script to start the computer vision pipeline:
 
 ```bash
 python hand_tracking/hand_tracking.py
@@ -53,11 +61,26 @@ python hand_tracking/hand_tracking.py
 
 This will start real-time **hand tracking** using a webcam.
 
+### Pose Estimation
+
+Run the personal trainer script for pose estimation and exercise tracking:
+
+```bash
+python personal_trainer/personal_trainer.py
+```
+
+This script provides real-time pose detection and angle measurement capabilities, tracking various body landmarks and counting repetitions of exercises.
+
 ---
 
 ## ✨ Features
 
-✔️ **Hand Tracking** – Detect and track hand movements in real time. ✔️ **Face Detection** – Identify faces in images and video streams. ✔️ **Gesture Recognition** – Recognize gestures using MediaPipe models. ✔️ **Object Detection** – Coming soon!
+✔️ **Hand Tracking** – Detect and track hand movements in real time.  
+✔️ **Pose Estimation** – Detect body poses and calculate joint angles.  
+✔️ **Exercise Repetition Counting** – Count exercise repetitions using pose estimation.  
+✔️ **Face Detection** – Identify faces in images and video streams.  
+✔️ **Gesture Recognition** – Recognize gestures using MediaPipe models.  
+✔️ **Object Detection** – Coming soon!
 
 ---
 
@@ -75,7 +98,9 @@ This will start real-time **hand tracking** using a webcam.
 
 ## 📌 To-Do List
 
--
+- Implement object detection
+- Add more exercise routines
+- Enhance gesture recognition
 
 ---
 
@@ -97,15 +122,8 @@ This project is licensed under the **MIT License** – see the [`LICENSE`](LICEN
 
 ---
 
-## 📷 Preview
-
-*(Optional: Add GIFs or screenshots showing your project in action)*
-
----
-
 ## ⭐ Show Some Love
 
 If you like this project, give it a ⭐ on GitHub!
 
 Happy coding! 🚀
-
