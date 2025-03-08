@@ -4,7 +4,7 @@ Welcome to the **ComputerVision** repository! This project focuses on leveraging
 
 ---
 ## Before I start
-I learned how to use this from this course: https://www.youtube.com/watch?v=01sAkU_NvOY
+This was possible because of this course: https://www.youtube.com/watch?v=01sAkU_NvOY
 
 ## 📖 Project Overview
 
