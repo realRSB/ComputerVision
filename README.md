@@ -103,24 +103,6 @@ This script provides real-time pose detection and angle measurement capabilities
 
 ---
 
-## 🤝 Contributing
-
-We welcome contributions! To contribute:
-
-1. Fork this repository
-2. Create a new branch: `git checkout -b feature-branch`
-3. Commit your changes: `git commit -m 'Added a new feature'`
-4. Push to the branch: `git push origin feature-branch`
-5. Open a pull request
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License** – see the [`LICENSE`](LICENSE) file for details.
-
----
-
 ## ⭐ Show Some Love
 
 If you like this project, give it a ⭐ on GitHub!
