@@ -3,12 +3,11 @@
 Welcome to the **ComputerVision** repository! This project focuses on leveraging **OpenCV** and **MediaPipe** for advanced computer vision applications, including hand tracking, pose estimation, and more. 🚀
 
 ---
+
 ## Before I start
 This was possible because of this course: https://www.youtube.com/watch?v=01sAkU_NvOY
 
 ---
-## Before I start
-This was possible because of this course: https://www.youtube.com/watch?v=01sAkU_NvOY
 
 ## 📖 Project Overview
 
